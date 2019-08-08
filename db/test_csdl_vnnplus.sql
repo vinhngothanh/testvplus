@@ -61,7 +61,7 @@ WHERE
 new.loggingTime BETWEEN CONCAT(DATE_ADD(DATE_ADD(LAST_DAY(NOW()), INTERVAL 1 DAY), INTERVAL - 3 MONTH),' 00:00:00') AND NOW() 
 GROUP BY DATE(new.loggingTime)
 ----------------------------
--- c trigger cập nhật thời gian autotimestamp khi cập nhật dữ liệu
+-- d trigger cập nhật thời gian autotimestamp khi cập nhật dữ liệu
 -- DROP TRIGGER IF EXISTS before_update;
 DELIMITER $$
 CREATE TRIGGER before_update BEFORE UPDATE ON mtlog201801 
